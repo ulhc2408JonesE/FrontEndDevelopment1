@@ -221,3 +221,60 @@ buildingType_select.addEventListener("change", function () {
         });
     }
 });
+
+//===================================================================================//
+
+const header1 = document.getElementById("step1")
+const header2 = document.getElementById("step2")
+const header3 = document.getElementById("step3")
+const header4 = document.getElementById("step4")
+
+const dropdown = document.getElementById("building-type")
+
+dropdown.addEventListener("change", () => {
+
+    console.log("TESTING DROPDOWN")
+
+    console.log(dropdown.value)
+
+    if (dropdown.value == "residential") {
+        header1.style.backgroundColor = "#0a65a0";
+        header2.style.backgroundColor = "#0a65a0";
+        header3.style.backgroundColor = "#0a65a0";
+        header4.style.backgroundColor = "#0a65a0";
+    } else if (dropdown.value == "industrial") {
+        header1.style.backgroundColor = "#FF7F7F";
+        header2.style.backgroundColor = "#FF7F7F";
+        header3.style.backgroundColor = "#FF7F7F";
+        header4.style.backgroundColor = "#FF7F7F";
+    } else if (dropdown.value == "commercial") {
+        header1.style.backgroundColor = "#A9A9A9";
+        header2.style.backgroundColor = "#A9A9A9";
+        header3.style.backgroundColor = "#A9A9A9";
+        header4.style.backgroundColor = "#A9A9A9";
+    }
+
+})
+
+function validateForm() {
+    let name = document.forms("myForm")("name").value;
+    let email = document.forms("myForm")("email").value;
+    let message = document.forms("myForm")("message").value;
+    let file = document.forms("myForm")("file").value;
+  
+    if (name == "" || email == "" || message == "") {
+      alert("Please fill in all fields");
+      return false;
+    }
+  
+    // Basic file type validation
+    let allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    if (allowedExtensions.exec(file)) {
+      alert("Please upload a valid image file (jpg, jpeg, or png)");
+      return false;
+    }
+  
+    return true;
+  }
+
+  

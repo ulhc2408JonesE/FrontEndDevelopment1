@@ -124,7 +124,7 @@
 					<form class="validate" id="quote-form">
 
 						<div class="select-building-type card card-default">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="step1">
 								<label for="building-type" class="card-title"> 
 									<h3>
 										<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Type of Building
@@ -143,7 +143,7 @@
 
 						<div class="estimate-num-elv card card-default"  style="display: none;"> 
 							
-							<div class="card-heading step-description">
+							<div class="card-heading step-description" id="step2">
 								<h3>
 									<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 2 |</span> Provide Building Information
 								</h3>
@@ -207,7 +207,7 @@
 						</div>
 
 						<div class="product-line card card-default" style="display: none;">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="step3">
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 3 |</span> Select Product Line</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
 								<p style="color: rgb(170, 69, 69); display: none; margin-bottom: 0px;" id="warning">Complete Step 2 to Estimate Price</p> 
@@ -239,7 +239,7 @@
 							</div>
 						</div>
 
-						<div class="final-pricing-display card card-default" style="display: none;">
+						<div class="final-pricing-display card card-default" style="display: none;" id="step4">
 							<div class="card-heading card-heading-transparent">
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 4 |</span> Estimated Pricing</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
@@ -351,7 +351,7 @@
 										<i class="fa fa-envelope"></i>
 									</span>
 									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
+									<span class="input-group-btn" accept = .jpeg,.jpng,.png > <small class="text-muted block">Max file size: 10 MB (jpeg/jpg/png)</small>
 										<button class="btn btn-primary" type="submit">
 											Subscribe
 										</button>
@@ -389,7 +389,7 @@
 		<script src="assets/js/view/demo.revolution_slider.js"></script>
 
 		<script src="assets/js/contact.js"></script>
-    <script src="quote.js"></script>
+    	<script src="./quote.js"></script>
 
 		<script type="text/javascript">
 			$("#subscribe-form").on("submit", function(e){
@@ -399,5 +399,6 @@
 			});
 		</script>
 
-	</body>
+</body>
 </html>
+
